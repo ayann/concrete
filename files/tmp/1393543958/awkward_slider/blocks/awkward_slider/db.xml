@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+
+<schema version="0.3">
+	<table name="btAwkwardSlider">
+		<field name="bID" type="I">
+			<key />
+			<unsigned />
+		</field>
+		<field name="fsID" type="I"><unsigned /></field>
+		<field name="maxHeight" type="I"><unsigned /><default value="600" /></field>
+		<field name="maxWidth" type="I"><unsigned /><default value="800" /></field>
+		<field name="showDesc" type="C2" size="16"></field>
+		<field name="backgroundColor" type="C2" size="16"></field>
+		<field name="activeThumbColor" type="C2" size="16"></field>
+		<field name="inactiveThumbColor" type="C2" size="16"></field>
+		<field name="transition" type="C2" size="16"></field>
+		<field name="fit_to_parent" type="C2" size="16"></field>
+		<field name="auto_scroll" type="C2" size="16"></field>
+		<field name="scroll_interval" type="C2" size="16"></field>
+		<field name="scroll_continuous" type="C2" size="16"></field>
+		<field name="loading" type="C2" size="16"></field>
+		<field name="arrows" type="C2" size="16"></field>
+		<field name="buttons" type="C2" size="16"></field>
+		<field name="btn_numbers" type="C2" size="16"></field>
+		<field name="pauseonover" type="C2" size="16"></field>
+		<field name="transition" type="C2" size="16"></field>
+		<field name="transition_delay" type="C2" size="16"></field>
+		<field name="transition_speed" type="C2" size="16"></field>
+		<field name="show_caption" type="C2" size="16"></field>
+		<field name="thumbnails" type="C2" size="16"></field>
+		<field name="thumbnails_position" type="C2" size="16"></field>
+		<field name="thumbnails_direction" type="C2" size="16"></field>
+		<field name="dynamic_height" type="C2" size="16"></field>
+	</table>
+
+	<table name="btAwkwardSliderImg">
+		<field name="GalleryImgId" type="I">
+			<key />
+			<autoincrement />
+			<unsigned />
+		</field>
+		<field name="bID" type="I"><unsigned /></field>
+		<field name="fID" type="I"><unsigned /></field>
+		<field name="position" type="I"><unsigned /></field>	
+		<field name="imgHeight" type="I"><unsigned /></field>	
+		<field name="imgWidth" type="I"><unsigned /></field>
+	</table>
+</schema>

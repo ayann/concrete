@@ -1,0 +1,21 @@
+<prev_button>
+	<defaults round_corners="5,5,5,5"/>
+	<tweenOver tint="0xFFFFFF" scaleX="1.2" scaleY="1.2"/>
+	<tweenOut tint="0x000000" />
+</prev_button>
+
+<prev_symbol>
+	<defaults type="6" />
+	<tweenOver tint="0x000000" />			
+</prev_symbol>
+
+<next_button>
+	<defaults round_corners="5,5,5,5"/>			
+	<tweenOver tint="0xFFFFFF"  scaleX="1.2" scaleY="1.2"/>
+	<tweenOut tint="0x000000" />
+</next_button>
+
+<next_symbol>
+	<defaults type="6" />
+	<tweenOver tint="0x000000" />
+</next_symbol>	

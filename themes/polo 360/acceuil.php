@@ -1,169 +1,92 @@
 <?php $this->inc('elements/_header.php') ?>	
 	<div class="pure-u-1" id="cadre-noir">
 		<div id="slide">
-			<img id="img" src="http://lorempixel.com/960/342">
+			<?php
+			   $slider = new Area('slider');
+			   if (($slider->getTotalBlocksInArea($c) > 0) || ($c->isEditMode())) {
+			       $slider->setBlockLimit(1);
+			       $slider->display($c);
+			   } else { ?>
+					<img id="img" src="http://lorempixel.com/960/342">
+			  <?php } ?>
+		</div>
+		<div id="dessous">
 			<img id="ombre" src="<?php echo $this->getThemePath();?>/pure/img/ombreslider.png">
-			<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</h3>
+			<?php 
+			    $titre = new Area('un titre de niveau 3');
+			    if (($titre->getTotalBlocksInArea($c) > 0) || ($c->isEditMode())) {
+					$titre->setBlockLimit(1);
+					$titre->display($c);
+			    } else { ?>
+			   		<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
+		    <?php } ?>
 		</div>
 	</div>
 	<div class="pure-u-1" id="content">
-		<div class="container">
+		<div class="container" id="container1">
 			<div id="trait"></div>
 			<div class="pure-u-1-3">
 				<div class="groupe">
-					<div class="titre">
-						<h1>Pefect logic</h1>
-						<span>nihil dolore consequuntur dolor.</span>
-					</div>
-					<div class="image">
-						<img id="img" src="http://lorempixel.com/235/240">
-					</div>
-					<div class="texte">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, suntn culpa qui officia deserunt mollit anim id est laborum.
-					</div>
-					<div class="button1">
-						<a href=""> Learn more</a>
-						<span></span>
-					</div>
+					<?php 
+					   $a = new Area('contenu 1');
+				       $a->setBlockLimit(1);
+				       $a->display($c);
+					?>
 				</div>
 			</div>
 			<div class="pure-u-1-3">
 				<div class="groupe">
-					<div class="titre">
-						<h1>Pefect logic</h1>
-						<span>nihil dolore consequuntur dolor.</span>
-					</div>
-					<div class="image">
-						<img id="img" src="http://lorempixel.com/235/240">
-					</div>
-					<div class="texte">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, suntn culpa qui officia deserunt mollit anim id est laborum.
-					</div>
-					<div class="button1">
-						<a href=""> Learn more</a>
-						<span></span>
-					</div>
+					<?php 
+					   $b = new Area('contenu 2');
+				       $b->setBlockLimit(1);
+				       $b->display($c);
+					?>
 				</div>
 			</div>
 			<div class="pure-u-1-3">
 				<div class="groupe">
-					<div class="titre">
-						<h1>Pefect logic</h1>
-						<span>nihil dolore consequuntur dolor.</span>
-					</div>
-					<div class="image">
-						<img id="img" src="http://lorempixel.com/235/240">
-					</div>
-					<div class="texte">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, suntn culpa qui officia deserunt mollit anim id est laborum.
-					</div>
-					<div class="button1">
-						<a href=""> Learn more</a>
-						<span></span>
-					</div>
+					<?php 
+					   $d = new Area('contenu 3');
+				       $d->setBlockLimit(1);
+				       $d->display($c);
+					?>
 				</div>
 			</div>
 		</div>
-		<div class="container">
+		<div class="container" id="container2">
 			<div id="trait"></div>
 			<div class="pure-u-1-3">
 				<div class="groupe">
-					<div class="titre" id="part2">
-						<h1>Social connection</h1>
-					</div>
-					<div class="texte">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					</div>
-					<div class="social_img">
-						<a href="#" id="rss" title="flux Rss"></a>
-						<a href="#" id="fbk" title="Facebook"></a>
-						<a href="#" id="in"  title="Linkdln"></a>
-						<a href="#" id="ytb" title="Youtube"></a>
-						<a href="#" id="twt" title="Twitter"></a>
-					</div>
+					<?php 
+						$social = new Area('social');
+						$social->setBlockLimit(1);
+						$social->display($c);
+					?>
 				</div>
 				<div class="groupe" id="newsletter">
-					<div class="titre" id="part2">
-						<h1>Newsletter</h1>
-					</div>
-					<div class="texte">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						ididunt ut labore et dolore 
-					</div>
-					<form class="pure-form">
-					    <fieldset class="pure-group">
-					    	<input type="text" class="pure-input-1" placeholder="Your email address">
-					    </fieldset>
-					    <div class="button2">
-					    	<input type="submit" value="Subcribe">
-					    	<span></span>
-					    </div>
-					</form>
+					<?php 
+						$newsletter = new Area('newsletter');
+						$newsletter->setBlockLimit(1);
+						$newsletter->display($c);
+					?>
 				</div>
 			</div>
 			<div class="pure-u-1-3">
 				<div class="groupe">
-					<div class="titre" id="part2">
-						<h1>Contact</h1>
-					</div>
-					<div class="formulaire">
-						<form class="pure-form">
-						    <fieldset class="pure-group">
-						        <input type="text" class="pure-input-1" placeholder="Your name">
-						    </fieldset>
-
-						    <fieldset class="pure-group">
-						        <input type="text" class="pure-input-1" placeholder="Your email address">
-						    </fieldset>
-
-						    <fieldset class="pure-group">
-						    	<textarea class="pure-input-1" rows="7" placeholder="message"></textarea>
-						    </fieldset>
-							<div class="button2">
-								<input type="submit" value="Send it">
-								<span></span>
-							</div>
-						</form>
-					</div>
+					<?php 
+						$Contact = new Area('Contact');
+						$Contact->setBlockLimit(1);
+						$Contact->display($c);
+					?>
 				</div>
 			</div>
 			<div class="pure-u-1-3">
 				<div class="groupe">
-					<div class="titre" id="part2">
-						<h1>News Updates</h1>
-					</div>
-					<div class="news">
-						<img  src="http://lorempixel.com/46/46">
-						<p>que reprehenderit imus consequuntur placeat quos aspernatur alias! Molestiae architecto libero enim.</p>
-					</div>
-					<div class="news">
-						<img  src="http://lorempixel.com/46/46">
-						<p>que reprehenderit imus consequuntur placeat quos aspernatur alias! Molestiae architecto libero enim.</p>
-					</div>
-					<div class="news">
-						<img  src="http://lorempixel.com/46/46">
-						<p>que reprehenderit imus consequuntur placeat quos aspernatur alias! Molestiae architecto libero enim.</p>
-					</div>
-					<div class="button2" id='esp'>
-						<a href="">Visit our blog</a>	
-						<span></span>
-					</div>
+					<?php 
+						$news = new Area('news');
+						$news->setBlockLimit(1);
+						$news->display($c);
+					?>
 				</div>
 			</div>
 		</div>

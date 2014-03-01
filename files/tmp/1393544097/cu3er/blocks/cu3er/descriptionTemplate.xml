@@ -1,0 +1,16 @@
+<description>
+	<defaults 
+	round_corners="0, 0, 0, 0"
+	heading_text_size="22"
+	heading_text_color="0xFFFFFF"          
+	heading_text_margin="10, 0, 0,10"  
+	 
+	paragraph_text_size="13"
+	paragraph_text_color="0xFFFFFF"
+	paragraph_text_margin="10, 0, 0, 10"
+
+	/>
+	<tweenIn tint="0x000000" alpha="0.15" />
+	<tweenOut time="0.5" />
+	<tweenOver tint="0x000000" alpha="0.4" />
+</description>

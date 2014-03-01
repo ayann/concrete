@@ -15,12 +15,11 @@
 					<img src="<?php echo $this->getThemePath();?>/pure/img/logo.png">
 				</div>	
 				<div id="lien_nav">
-					<ul>
-						<li><a href="">toto</a></li>
-						<li><a href="">toto</a></li>
-						<li><a href="">toto</a></li>
-						<li><a href="">toto</a></li>
-					</ul>
+					<?php
+			            $a = new Area("nav");
+			            $a->setBlockLimit(1);
+			            $a->display($c);
+		            ?>
 				</div>	
 			</div>
 		</div>

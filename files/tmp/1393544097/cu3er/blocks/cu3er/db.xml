@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<schema version="0.3">
+
+	<table name="btCu3er">
+		<field name="bID" type="I">
+			<key />
+			<unsigned />
+		</field>
+		<field name="fsID" type="I"><unsigned /></field>		
+		<field name="playback" type="C" size="50"></field>	
+		<field name="durationBeforeTransition" type="F">
+			<unsigned />
+			<default value="4" />
+		</field>
+		<field name="duration" type="F"><unsigned /></field>
+		<field name="fadeDuration" type="F"><unsigned /></field>
+		<field name="linkImage" type="L">
+			<default value="0"/>
+		</field>
+		<field name="defaultnumslices" type="C" size="10"></field>
+		<field name="defaultslice" type="C" size="255"></field>
+		<field name="defaultdirection" type="C" size="255"></field>
+		<field name="defaultdelay" type="C" size="10"></field>
+		<field name="defaultcubecolour" type="C" size="255"></field>
+		<field name="defaultFader" type="C" size="255"></field>
+		<field name="defaultZmultiplier" type="F"></field>
+		<field name="enableShadow" type="L">
+			<default value="0"/>
+		</field>
+		<field name="shadowImage" type="C" size="255"></field>
+		<field name="shadowfID" type="I"><unsigned /></field>	
+		<field name="fallbackFID" type="I"><unsigned /></field>
+		<field name="maxHeight" type="N"><unsigned /></field>
+		<field name="maxWidth" type="N"><unsigned /></field>
+		<field name="nobuttons" type="I"><unsigned /></field>
+		<field name="xmloutput" type="X2"></field>
+	</table>
+	
+	<table name="btCu3erImg">
+		<field name="slideshowImgId" type="I">
+			<key />
+			<autoincrement />
+			<unsigned />
+		</field>
+		<field name="bID" type="I"><unsigned /></field>
+		<field name="fID" type="I"><unsigned /></field>		
+		<field name="url" type="C" size="255"></field>
+		<field name="duration" type="F"><unsigned /></field>
+		<field name="fadeDuration" type="F"><unsigned /></field>
+		<field name="groupSet" type="I"><unsigned /></field>
+		<field name="position" type="I"><unsigned /></field>	
+		<field name="imgHeight" type="I"><unsigned /></field>	
+		<field name="descriptionLink" type="C" size="255"></field>
+		<field name="descriptionHeading" type="X2"></field>
+		<field name="descriptionParagraph" type="X2"></field>
+		<field name="transitionNum" type="I"><unsigned /></field>
+		<field name="transitionSlicing" type="C" size="255"></field>
+		<field name="transitionDirection" type="C" size="255"></field>
+		<field name="transitionFader" type="C" size="255"></field>
+		<field name="transitionDelay" type="F"></field>
+		<field name="transitionZmultiplier" type="F"></field>
+	</table>
+	
+</schema>

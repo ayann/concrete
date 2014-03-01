@@ -4,13 +4,11 @@
 					<div id="contenu">
 						<p>expedita sit consectetur  sit amet, consectetur adipisicin gsapiente dolor!</p>
 						<div class="liens">
-							<ul>
-								<li><a href="#">Home </a></li>
-								<li><a href="#">About</a></li>
-								<li><a href="#">Products</a></li>
-								<li><a href="#">Services</a></li>
-								<li><a href="#">Contacts</a></li>
-							</ul>
+							<?php
+					            $a = new Area("nav2");
+					            $a->setBlockLimit(1);
+					            $a->display($c);
+				            ?>
 						</div>
 						<div class="liens">
 							<ul>
